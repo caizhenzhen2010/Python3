@@ -8,4 +8,6 @@
 3.git push
 Clone repo
 git clone https://github.com/caizhenzhen/Lean.git
+删除git add 的文件
+git rm -f file
 
