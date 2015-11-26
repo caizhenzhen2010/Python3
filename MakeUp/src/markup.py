@@ -21,7 +21,7 @@ class Parser:
         self.filters.append(filter)
     def parse(self,file):
         self.handler.start('document')
-        for block in blocks(file):
+        for block in blocks("test_input.txt"):
             for filter in self.filters:
                 block=filter(block,self.handler)
             for rule in self.rules:
@@ -29,11 +29,12 @@ class Parser:
                     last=rule.action(block,self.handler)
                     if last:break
         self.handler.end('document')
+        
 class BasicTextParser(Parser):
     """
     在构造函数中增加规则和过滤器的具体语法分析器
     """
-    def __int__(self,handler):
+    def __init__(self,handler):
         Parser.__int__(self,handler)
         self.addRule(ListRule())
         self.addRule(ListItemRule())
@@ -46,8 +47,8 @@ class BasicTextParser(Parser):
         self.addFilter(r'([\.a-zA-Z]+@[\.a-zA-Z]+[a-zA-Z]+)', 'mail')
         
 handler=HTMLRender()
-parser=BasicTextParser(handler)
+TextParser=BasicTextParser(handler)
 
-parser.parse(sys.stdin)
+TextParser.parse(sys.stdin)
 
                 
