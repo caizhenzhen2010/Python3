@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/ball.py=utf-8
 encoding//src/lean_ConfigParser.py=utf-8
 encoding//src/lean_logging.py=utf-8
 encoding//src/my_math.py=utf-8
+encoding//src/xmlGener.py=utf-8
