@@ -4,9 +4,12 @@
 import os,sys,pygame
 from pygame.locals import *
 import objects,config
+import logging,time
 from pygame.constants import KEYDOWN, K_ESCAPE
 
+
 "这个模块包含Squish游戏的主要逻辑"
+
 
 class State:
     """
@@ -141,9 +144,13 @@ class GameOver(Paused):
     Game Over
     Click to Restart,Esc to Quit'''
 class Game:
+    logging.basicConfig(level=logging.INFO,filename='mylog.log')
     def __init__(self,*args):
+        logging.info(time.asctime()+'   游戏主程序初始化')
         path=os.path.abspath(args[0])
+        logging.info(time.asctime()+path)
         dir=os.path.split(path)[0]
+        logging.info(time.asctime()+dir)
         os.chdir(dir)
         self.state=None
         self.nextState=StartUp()
@@ -151,7 +158,9 @@ class Game:
         """
         初始化
         """
+        logging.info(time.asctime()+'   游戏主程序开始')
         pygame.init()
+        
         flag=0
         if config.full_screen:
             flag=FULLSCREEN
@@ -170,6 +179,9 @@ class Game:
             #更新状态
             self.state.update(self)
             self.state.display(screen)
+            
 if __name__=='__main__':
+    logging.info(time.asctime()+'   载入游戏')
     game=Game(*sys.argv)
+    logging.info(time.asctime()+'   开始游戏')
     game.run()
