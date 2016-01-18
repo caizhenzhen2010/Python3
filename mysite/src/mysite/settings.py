@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': {2
         'ENGINE': 'django.db.backends.mysql', #设置为mysql数据库
         'NAME': 'mysite',  #mysql数据库名
         'USER': 'root',  #mysql用户名，留空则默认为当前linux用户名

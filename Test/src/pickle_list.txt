@@ -1,0 +1,8 @@
+(lp0
+S'ls'
+p1
+aI1
+aI2
+aI3
+aI4
+a.

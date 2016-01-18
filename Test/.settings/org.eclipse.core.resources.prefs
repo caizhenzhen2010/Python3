@@ -1,7 +1,14 @@
 eclipse.preferences.version=1
+encoding//course/geturl.py=utf-8
+encoding//decorate/deco.py=utf-8
+encoding//myscrapy/main/myscrapy.py=utf-8
+encoding//source/file/module.py=utf-8
+encoding//source/main/index.py=utf-8
 encoding//src/ball.py=utf-8
 encoding//src/dict_sorted.py=utf-8
+encoding//src/l_bytearray.py=utf-8
 encoding//src/lean_ConfigParser.py=utf-8
 encoding//src/lean_logging.py=utf-8
 encoding//src/my_math.py=utf-8
+encoding//src/myfunc.py=utf-8
 encoding//src/xmlGener.py=utf-8
