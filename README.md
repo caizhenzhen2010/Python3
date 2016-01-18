@@ -1,2 +1,2 @@
 # Python3
-To lean Python3
+To learn Python3
